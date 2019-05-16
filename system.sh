@@ -1,5 +1,7 @@
 #!/bin/bash
-#start like: wget /yor_dir/system.sh -qO - | bash
+#start like:
+#    wget /yor_dir/system.sh -qO - | bash
+#    wget https://github.com/k0nsul/linux-benchmark/edit/master/system.sh -qO- | bash
 
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
